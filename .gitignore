@@ -1,0 +1,6 @@
+# Ignore data folder contents
+data/*
+
+# Ignore model and scaler files
+trained_lstm_model.h5
+data_scaler.pkl

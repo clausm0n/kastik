@@ -1,0 +1,22 @@
+name: fintech
+channels:
+  - nvidia
+  - conda-forge
+  - plotly
+dependencies:
+  - python
+  - tensorflow-gpu
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - cudatoolkit
+  - cudnn
+  - pandas
+  - python-dotenv
+  - ta-lib
+  - joblib
+  - tqdm
+  - plotly
+  - dash
