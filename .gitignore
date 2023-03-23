@@ -4,3 +4,8 @@ data/*
 # Ignore model and scaler files
 trained_lstm_model.h5
 data_scaler.pkl
+*.h5
+__pycache__/
+.vscode/
+build/
+crawler/

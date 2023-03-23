@@ -38,10 +38,16 @@ def main(input_file):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+    # model = tf.keras.Sequential([
+    #     tf.keras.layers.LSTM(50, activation='relu', input_shape=(X_train.shape[1], X_train.shape[2]), use_bias=True),
+    #     tf.keras.layers.Dropout(0.2),
+    #     tf.keras.layers.Dense(len(future_steps))
+    # ])
+
     model = tf.keras.Sequential([
-        tf.keras.layers.LSTM(50, activation='relu', input_shape=(X_train.shape[1], X_train.shape[2]), use_bias=True),
-        tf.keras.layers.Dropout(0.2),
-        tf.keras.layers.Dense(len(future_steps))
+    tf.keras.layers.LSTM(50, input_shape=(X_train.shape[1], X_train.shape[2]), use_bias=True),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(len(future_steps))
     ])
 
     model.compile(optimizer='adam', loss='mean_squared_error')
